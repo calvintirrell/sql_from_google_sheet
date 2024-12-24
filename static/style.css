@@ -1,0 +1,26 @@
+/* Make the font size smaller on smaller screens */
+@media only screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+}
+  
+/* Make the font size even smaller on mobile screens */
+@media only screen and (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+}
+
+body {
+    max-width: 800px;
+    font-size: 2vw;
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+.flashes {
+    padding: 2px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+}

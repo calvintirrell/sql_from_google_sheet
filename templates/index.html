@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload and Text Input</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>File Upload and Text Input</h1>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST" enctype="multipart/form-data">
+        <label for="text_input">Enter Additional Instructions:</label><br>
+        <textarea id="text_input" name="text_input" rows="4" cols="50">Example: Provide me SQL code that will only include data from the uploaded file.
+        </textarea><br><br>
+
+        <label for="file">Upload File (CSV, XLS, XLSX):</label><br>
+        <input type="file" id="file" name="file"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
